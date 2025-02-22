@@ -1,0 +1,397 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+#user {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#logoutButton {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#logoutButton:hover {
+  background-color: #c82333;
+}
+
+.edit-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 90%;
+  max-width: 600px;
+  z-index: 1000;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group label::after {
+  content: " *";
+  color: red;
+  display: none;
+}
+
+.form-group label[for$="Nombre"]::after,
+.form-group label[for$="Id"]::after,
+.form-group label[for$="Email"]::after,
+.form-group label[for$="Rol"]::after,
+.form-group label[for$="Estado"]::after {
+  display: inline;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-group small {
+  display: block;
+  color: #666;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.preview-foto {
+  max-width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-guardar,
+.btn-cancelar {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-guardar {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-cancelar {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-guardar:hover {
+  background-color: #45a049;
+}
+
+.btn-cancelar:hover {
+  background-color: #da190b;
+}
+
+.form-group input:invalid,
+.form-group select:invalid {
+  border-color: #f44336;
+}
+
+.admin-btn:nth-child(1) {
+  background-color: #e3f2fd;
+}
+.admin-btn:nth-child(2) {
+  background-color: #e8f5e9;
+}
+.admin-btn:nth-child(3) {
+  background-color: #ffebee;
+}
+
+@media (max-width: 768px) {
+  .admin-buttons {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profesores-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.profesor-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profesor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profesor-card h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.profesor-card p {
+  margin: 8px 0;
+  color: #666;
+}
+
+.card-actions {
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.actions-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-volver {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 20px auto;
+  display: block;
+}
+
+.btn-volver:hover {
+  background-color: #5a6268;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-panel {
+  padding: 2rem;
+}
+
+.admin-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-btn {
+  padding: 2rem;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.admin-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-anadir,
+.btn-eliminar,
+.btn-editar {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-editar {
+background-color: #007bff;
+  color: white;
+}
+.btn-eliminar {
+  background-color: #f44336;
+  color: white;
+}
+.btn-anadir {
+  background-color: #4caf50;
+  color: white;
+}
+
+#btnGestionar,#btnGestionarEmpresa,#btnGestionarContacto,#btnGestionarPracticas,#seguimiento{
+  background-color: #28a745;
+}
+#btnAnadir,#btnAnadirEmpresa,#btnAnadirContacto{
+  background-color: #007bff;
+}
+#btnBorrar,#btnBorrarEmpresa,#btnBorrarContacto {
+  background-color: #dc3545;
+}
+
+.tutor-panel {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.empresas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.empresas-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.empresas-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.empresas-card h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.empresas-card p {
+  margin: 8px 0;
+  color: #666;
+}
+.contactos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.contactos-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contactos-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contactos-card h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.contactos-card p {
+  margin: 8px 0;
+  color: #666;
+}
+
+.oculto { display: none; }
+
+.no-practicas,.sin-contactar{
+  background-color: #F44336 ;
+  margin : 50px;
+  padding: 20px;
+  border-radius: 8px; 
+}
+.pendiente,.Contactado{
+  background-color: #FF9800 ;
+  margin : 50px;
+  padding: 20px;
+  border-radius: 8px; 
+}
+.asignada,.admiteAlumno{
+  background-color: #2196F3 ;
+  margin : 50px;
+  padding: 20px;
+  border-radius: 8px; 
+}
+.finalizada,.noAdmiteAlumno{
+  background-color: #4CAF50 ;
+  margin : 10px;
+  padding: 20px;
+  border-radius: 8px; 
+}

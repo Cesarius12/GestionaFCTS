@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Tutor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Panel de Tutor</h1>
+        <div class="user-info">
+            <span id="user"></span>
+            <button id="logoutButton">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <div class="tutor-panel">
+        <div class="menu-section">
+            <h2>Gestión de Empresas</h2>
+            <div class="admin-buttons">
+                <button id="btnGestionarEmpresa" class="admin-btn">
+                    Gestionar Empresas
+                </button>
+                <button id="btnAnadirEmpresa" class="admin-btn">
+                    Añadir Empresa
+                </button>
+                <button id="btnBorrarEmpresa" class="admin-btn">
+                    Borrar Empresas
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Gestión de Personas de Contacto</h2>
+            <div class="admin-buttons">
+                <button id="btnGestionarContacto" class="admin-btn">
+                    Gestionar Contactos
+                </button>
+                <button id="btnAnadirContacto" class="admin-btn">
+                    Añadir Contacto
+                </button>
+                <button id="btnBorrarContacto" class="admin-btn">
+                    Borrar Contactos
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Gestión de Alumnos y Practicas</h2>
+            <div class="admin-buttons">
+                <button id="btnGestionar" class="admin-btn">
+                    Gestionar Alumnos
+                </button>
+                <button id="btnGestionarPracticas" class="admin-btn">
+                    Gestionar Practicas
+                </button>
+                <button id="seguimiento" class="admin-btn">
+                    Seguimiento de las comunicaciones
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/tutor.js"></script>
+</body>
+</html> 

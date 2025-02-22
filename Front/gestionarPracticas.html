@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Practicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Gestión de Practicas</h1>
+        <div class="user-info">
+            <span id="user"></span>
+            <button id="logoutButton">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <button onclick="window.location.href='tutor.html'" class="btn-volver">Volver</button>
+
+    <div class="container">
+        <div class="admin-buttons">
+            <button id="btnGestionar" class="admin-btn">
+                Gestionar Practicas
+            </button>
+            <button id="btnGestionarPracticas" class="admin-btn">
+                Gestionar Practicas asignadas
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="js/gestionarPracticas.js"></script>
+</body>
+</html> 
