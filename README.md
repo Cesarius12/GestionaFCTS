@@ -1,4 +1,4 @@
-#🌟 Aplicación de Gestión de FCTs (Formación en Centros de Trabajo) 🌟
+# 🌟 Aplicación de Gestión de FCTs (Formación en Centros de Trabajo) 🌟
 
 🎯 Descripción
 Bienvenido a la Aplicación de Gestión de FCTs. Este proyecto tiene como objetivo gestionar las Formaciones en Centros de Trabajo (FCTs) de los alumnos, proporcionando una plataforma para que distintos usuarios puedan interactuar de manera eficiente y organizada. 🙌
