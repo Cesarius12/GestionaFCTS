@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Empresa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Editar Empresa</h1>
+        <div class="user-info">
+            <span id="user"></span>
+            <button id="logoutButton">Cerrar Sesión</button>
+        </div>
+    </div>
+<!--Formulario de empresas para edicion donde se muestran los datos recogidos en el js para la persistencia -->
+    <div class="container">
+        <h1>Formulario de Empresa</h1>
+        <form id="empresaForm">
+            <div class="form-group">
+                <label for="nombre">Nombre de la Empresa:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="razonSocial">Razón Social:</label>
+                <select id="razonSocial" name="razonSocial" required>
+                    <option value="Publica">Publica</option>
+                    <option value="Privada">Privada</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tipo">Tipo de Empresa:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="Sociedad Limitada">Sociedad Limitada</option>
+                    <option value="Sociedad Anónima">Sociedad Anónima</option>
+                    <option value="Autónomo">Autónomo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cif">NIF/CIF:</label>
+                <input type="text" id="cif" name="cif" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <textarea id="direccion" name="direccion" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="localidad">Ciudad:</label>
+                <input type="text" id="localidad" name="localidad" required>
+            </div>
+
+            <div class="form-group">
+                <label for="codigo_postal">Código Postal:</label>
+                <input type="text" id="codigo_postal" name="codigo_postal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pais">País:</label>
+                <input type="text" id="pais" name="pais" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaC">Fecha de Constitución:</label>
+                <input type="date" id="fechaC" name="fechaC" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sector">Sector de Industria:</label>
+                <select id="sector" name="sector" required>
+                    <option value="Desarrollo">Desarrollo</option>
+                    <option value="Sistemas">Sistemas</option>
+                    <option value="Diseño">Diseño</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="emp">Número de Empleados:</label>
+                <input type="number" id="emp" name="emp" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="web">Sitio Web:</label>
+                <input type="url" id="web" name="web">
+            </div>
+
+            <div class="form-group">
+                <label for="logo">Logo de la Empresa (URL):</label>
+                <input type="url" id="logo" name="logo">
+            </div>
+
+            <div class="form-group">
+                <label for="rep">Representante Legal:</label>
+                <input type="text" id="rep" name="rep" required>
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado de la Empresa:</label>
+                <select id="estado" name="estado" required>
+                    <option value="Sin contactar">Sin contactar</option>
+                    <option value="Contactado">Contactado</option>
+                    <option value="Admite alumnos">Admite alumnos</option>
+                    <option value="No admite alumnos">No admite alumnos</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaA">Fecha de Alta:</label>
+                <input type="date" id="fechaA" name="fechaA" required>
+            </div>
+
+            <div class="form-group">
+                <label for="notas">Notas Adicionales:</label>
+                <textarea id="notas" name="notas"></textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="btn-guardar">Guardar Empresa</button>
+           
+            <button type="button" onclick="window.location.href='tutor.html'" class="btn-cancelar">
+                Cancelar
+            </button> 
+            </div>
+        </form>
+    </div>
+
+    <script type="module" src="js/editarEmpresa.js"></script>
+</body>
+</html> 

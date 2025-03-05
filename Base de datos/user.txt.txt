@@ -1,0 +1,5 @@
+CREATE USER 'cesar'@'%' IDENTIFIED BY 'cesar';
+GRANT ALL PRIVILEGES ON *.* TO 'cesar'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+Create database fct_db;

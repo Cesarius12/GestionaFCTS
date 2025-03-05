@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Practicas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+<!--Formulario de practicas para edicion donde se muestran los datos recogidos en el js para la persistencia, este formulario reacciona segun los campos de estado que vayamos eligiendo -->
+  <body>
+    <div class="header">
+      <h1>Gestión de Practicas</h1>
+      <div class="user-info">
+        <span id="user"></span>
+        <button id="logoutButton" class="logout-button">Cerrar Sesión</button>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Formulario de Practicas</h1>
+      <form id="formPracticas" class="form-container">
+        <div class="form-group">
+          <label for="nombre_completo">Nombre Completo:</label>
+          <input
+            type="text"
+            id="nombre_completo"
+            name="nombre_completo"
+            required
+            readonly
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="idAlum">ID Alumno:</label>
+          <input type="text" id="idAlum" name="idAlum" required readonly />
+        </div>
+
+        <div class="form-group">
+          <label for="idEmpresa">ID Empresa:</label>
+          <input type="text" id="idEmpresa" name="idEmpresa" />
+        </div>
+        <div class="form-group">
+          <label for="estado">Estado:</label>
+          <select id="estado" name="estado" required>
+            <option value="NO REALIZA PRACTICAS">NO REALIZA PRACTICAS</option>
+            <option value="PENDIENTE ASIGNACION DE PRACTICAS">
+              PENDIENTE ASIGNACION DE PRACTICAS
+            </option>
+            <option value="ASIGNADO A EMPRESA">ASIGNADO A EMPRESA</option>
+            <option value="PENDIENTE CONVENIO">PENDIENTE CONVENIO</option>
+            <option value="REALIZADO CONVENIO">REALIZADO CONVENIO</option>
+            <option value="PENDIENTE RELACION DE ALUMNOS">
+              PENDIENTE RELACION DE ALUMNOS
+            </option>
+            <option value="REALIZADO RELACION DE ALUMNOS">
+              REALIZADO RELACION DE ALUMNOS"
+            </option>
+            <option value="PENDIENTE PROGRAMA y HORARIO">
+              PENDIENTE PROGRAMA y HORARIO
+            </option>
+            <option value="REALIZADO PROGRAMA y HORARIO">
+              REALIZADO PROGRAMA y HORARIO
+            </option>
+            <option value="PENDIENTE EVALUCIÓN EMPRESA">
+              PENDIENTE EVALUCIÓN EMPRESA
+            </option>
+            <option value="REALIZADA EVALUACION EMPRESA">
+              REALIZADA EVALUACION EMPRESA
+            </option>
+            <option value="PENDIENTE HOJAS DE FIRMAS">
+              PENDIENTE HOJAS DE FIRMAS
+            </option>
+            <option value="REALIZADAS HOJAS DE FIRMAS">
+              REALIZADAS HOJAS DE FIRMAS
+            </option>
+            <option value="PENDIENTE ENVIO DOCUMENTACION">
+              PENDIENTE ENVIO DOCUMENTACION
+            </option>
+            <option value="FINALIZADAS" selected>FINALIZADAS</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="idTutor">Id Tutor:</label>
+          <input type="text" id="idTutor" name="idTutor" readonly />
+        </div>
+
+        <div class="form-group">
+          <label for="idContacto">ID Contacto:</label>
+          <input type="text" id="idContacto" name="idContacto" readonly />
+        </div>
+
+
+        <!-- Sección REALIZACIÓN CONVENIO -->
+        <div id="seccionConvenio" class="seccion oculto">
+          <h3>Realización Convenio</h3>
+          <div class="form-group">
+            <label for="nombreEmp">Nombre Empresa:</label>
+            <input type="text" id="nombreEmp" name="nombreEmp" />
+          </div>
+          <div class="form-group">
+            <label for="cifEmp">CIF Empresa:</label>
+            <input type="text" id="cifEmp" name="cifEmp" />
+          </div>
+          <div class="form-group">
+            <label for="direccionEmp">Dirección Empresa:</label>
+            <textarea id="direccionEmp" name="direccionEmp"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="tipoEmp">Tipo de Empresa:</label>
+            <select id="tipoEmp" name="tipoEmp">
+              <option value="Sociedad Anónima">Sociedad Anónima</option>
+              <option value="Sociedad Limitada">Sociedad Limitada</option>
+              <option value="Autonomo">Autónomo</option>
+              <option value="Otra">Otra</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="nombreRep">Nombre del representante:</label>
+            <input type="text" id="nombreRep" name="nombreRep" />
+          </div>
+          <div class="form-group">
+            <label for="dniRep">DNI del representante:</label>
+            <input type="text" id="dniRep" name="dniRep" />
+          </div>
+          <div class="form-group">
+            <label for="cargoRep">Cargo del representante:</label>
+            <select id="cargoRep" name="cargoRep">
+              <option value="Director">Director</option>
+              <option value="RRHH">RRHH</option>
+              <option value="Desarrollador">Desarrollador</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="firmaConv">Firma de Convenio:</label>
+            <select id="firmaConv" name="firmaConv">
+              <option value="Pendiente realizacion de Convenio">
+                Pendiente realización de Convenio
+              </option>
+              <option value="Pendiente envio de empresa">
+                Pendiente envío de empresa
+              </option>
+              <option value="Pendiente firma de empresa">
+                Pendiente firma de empresa
+              </option>
+              <option value="pendiente firma director">
+                Pendiente firma director
+              </option>
+              <option value="Pendiente envio empresa">
+                Pendiente envío empresa
+              </option>
+              <option value="Enviado a empresa">Enviado a empresa</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="persCon">Persona de contacto de empresa:</label>
+            <input type="text" id="persCon" name="persCon" />
+          </div>
+
+          <div class="form-group">
+            <label for="emailCon">Email de contacto de empresa:</label>
+            <input type="email" id="emailCon" name="emailCon" />
+          </div>
+
+          <div class="form-group">
+            <label for="telfCon">Teléfono de contacto de empresa:</label>
+            <input type="text" id="telfCon" name="telfCon" />
+          </div>
+
+          <div class="form-group">
+            <label for="nombreTut">Nombre Tutor:</label>
+            <input type="text" id="nombreTut" name="nombreTut" />
+          </div>
+
+          <div class="form-group">
+            <label for="dniTut">DNI Tutor:</label>
+            <input type="text" id="dniTut" name="dniTut" />
+          </div>
+
+          <div class="form-group">
+            <label for="emailTut">Correo Tutor:</label>
+            <input type="email" id="emailTut" name="emailTut" />
+          </div>
+        </div>
+
+        <!-- Sección RELACIÓN DE ALUMNOS -->
+        <div id="seccionRelacion" class="seccion oculto">
+          <h3>Relación de Alumnos</h3>
+          <div class="form-group">
+            <label for="dirPrac">Lugar de Prácticas:</label>
+            <input type="text" id="dirPrac" name="dirPrac" />
+          </div>
+
+          <div class="form-group">
+            <label for="fechaI">Fecha Inicio:</label>
+            <input type="date" id="fechaI" name="fechaI"  />
+          </div>
+
+          <div class="form-group">
+            <label for="fechaF">Fecha Fin:</label>
+            <input type="date" id="fechaF" name="fechaF"  />
+          </div>
+
+          <div class="form-group">
+            <label for="horario">Horario:</label>
+            <select id="horario" name="horario" >
+              <option value="Dia">Dia</option>
+              <option value="Tarde">Tarde</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="numHoras">Número de Horas:</label>
+            <input
+              type="number"
+              id="numHoras"
+              name="numHoras"
+              min="0"
+              
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="modalidad">Modalidad:</label>
+            <select id="modalidad" name="modalidad" >
+              <option value="Presencial">Presencial</option>
+              <option value="Teletrabajo">Teletrabajo</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="firmaRel">Firma de Relación:</label>
+            <select id="firmaRel" name="firmaRel">
+              <option value="Pendiente realizacion de relacion">
+                Pendiente realización de relación
+              </option>
+              <option value="Pendiente envio de empresa">
+                Pendiente envío de empresa
+              </option>
+              <option value="Pendiente firma de empresa">
+                Pendiente firma de empresa
+              </option>
+              <option value="Pendiente firma director">
+                Pendiente firma director
+              </option>
+              <option value="Pendiente envio empresa">
+                Pendiente envío empresa
+              </option>
+              <option value="Enviado a empresa">Enviado a empresa</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Sección PROGRAMA Y HORARIO -->
+        <div id="seccionPrograma" class="seccion oculto">
+          <h3>Programa y Horario</h3>
+          <div class="form-group">
+            <label for="diaFirma">Día de Firma:</label>
+            <input type="date" id="diaFirma" name="diaFirma" />
+          </div>
+
+          <div class="form-group">
+            <label for="firmaSem">Firma Programa:</label>
+            <select id="firmaSem" name="firmaSem">
+              <option value="Pendiente realizacion de programa">
+                Pendiente realización de programa
+              </option>
+              <option value="Pendiente envio de empresa">
+                Pendiente envío de empresa
+              </option>
+              <option value="Pendiente firma de empresa">
+                Pendiente firma de empresa
+              </option>
+              <option value="Pendiente firma tutor de centro">
+                Pendiente firma tutor de centro
+              </option>
+              <option value="Pendiente envio empresa">
+                Pendiente envío empresa
+              </option>
+              <option value="Enviado a empresa">Enviado a empresa</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn-guardar">Guardar Cambios</button>
+          <button
+            type="button"
+            class="btn-cancelar"
+            onclick="window.location.href='listadoPracticas.html'"
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="js/editarPracticas.js"></script>
+  </body>
+</html>
