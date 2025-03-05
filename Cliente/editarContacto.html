@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Añadir Empresa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Añadir Nueva Empresa</h1>
+      <div class="user-info">
+        <span id="user"></span>
+        <button id="logoutButton">Cerrar Sesión</button>
+      </div>
+    </div>
+<!--Formulario de contactos para edicion donde se muestran los datos recogidos en el js para la persistencia -->
+    <!DOCTYPE html>
+    <html lang="es">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulario Empresa</title>
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <div class="container">
+          <h1>Formulario de Contacto</h1>
+          <form id="contactoForm">
+            <div class="form-group">
+              <label for="nombre">Nombre Completo:</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+
+            <div class="form-group">
+              <label for="cargo">Cargo/Puesto:</label>
+              <select id="cargo" name="cargo">
+                <option value="Director">Director</option>
+                <option value="RRHH">RRHH</option>
+                <option value="Desarrollador">Desarrollador</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="dep">Departamento:</label>
+              <select id="dep" name="dep">
+                <option value="Ventas">Ventas</option>
+                <option value="Contratacion">Contratación</option>
+                <option value="Informacion">Información</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo Electrónico:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="tel">Teléfono:</label>
+              <input type="tel" id="tel" name="tel" required />
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Dirección de Oficina:</label>
+              <input type="text" id="direccion" name="direccion" />
+            </div>
+
+            <div class="form-group">
+              <label for="horario">Horario de Trabajo:</label>
+              <select id="horario" name="horario">
+                <option value="Dia">Día</option>
+                <option value="Tarde">Tarde</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rel">Relación con la Empresa:</label>
+              <select id="rel" name="rel">
+                <option value="Empleado">Empleado</option>
+                <option value="Contratista">Contratista</option>
+                <option value="Consultor">Consultor</option>
+                <option value="Directivo">Directivo</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="fecha">Fecha de Ingreso:</label>
+              <input type="date" id="fecha" name="fecha" />
+            </div>
+
+            <div class="form-group">
+              <label for="foto">Foto de Perfil:</label>
+              <input type="text" id="foto" name="foto" />
+            </div>
+
+            <div class="form-group">
+              <label for="obv">Observaciones:</label>
+              <textarea id="obv" name="obv"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="estado">Estado:</label>
+              <select id="estado" name="estado">
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+                <option value="En licencia">En licencia</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="notas">Notas Adicionales:</label>
+              <textarea id="notas" name="notas"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="nivel">Nivel de Acceso:</label>
+              <select id="nivel" name="nivel">
+                <option value="Acceso total">Acceso total</option>
+                <option value="Acceso limitado">Acceso limitado</option>
+                <option value="Administrador">Administrador de personal</option>
+              </select>
+            </div>
+
+            <div class="button-container">
+              <button type="submit" class="btn-guardar">Guardar</button>
+              <button
+                type="button"
+                onclick="window.location.href='tutor.html'"
+                class="btn-cancelar"
+              >
+                Cancelar
+              </button>
+            </div>
+          </form>
+        </div>
+    <script type="module" src="js/editarContacto.js"></script>
+</body>
+</html> 

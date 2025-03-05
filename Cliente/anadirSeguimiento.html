@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Seguimiento</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!--Formulario de seguimientos -->
+  <body>
+    <div class="header">
+        <h1>Añadir Nuevo Seguimiento</h1>
+        <div class="user-info">
+            <span id="user"></span>
+            <button id="logoutButton">Cerrar Sesión</button>
+        </div>
+    </div>
+    <div class="container">
+      <h1>Formulario de Seguimiento</h1>
+      <form id="seguimientoForm" class="form-container">
+        <div class="form-group">
+          <label for="idEmp">ID Empresa:</label>
+          <input type="number" id="idEmp" name="idEmp" required />
+        </div>
+
+        <div class="form-group">
+          <label for="idCon">ID Contacto:</label>
+          <input type="number" id="idCon" name="idCon" />
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Fecha y Hora del Contacto:</label>
+          <input type="datetime-local" id="fecha" name="fecha" required />
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">Tipo de Contacto:</label>
+          <select id="tipo" name="tipo" required>
+            <option value="Llamada">Llamada</option>
+            <option value="Correo">Correo</option>
+            <option value="Reunión">Reunión</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="detalle">Detalle de la Conversación:</label>
+          <textarea id="detalle" name="detalle" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="proxPas">Próximo Paso:</label>
+          <textarea id="proxPas" name="proxPas"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="fechaProx">Fecha del Próximo Contacto:</label>
+          <input type="datetime-local" id="fechaProx" name="fechaProx" />
+        </div>
+
+        <div class="form-group">
+          <label for="observaciones">Observaciones:</label>
+          <textarea id="observaciones" name="observaciones"></textarea>
+        </div>
+
+        <div class="button-container">
+            <button type="submit" class="btn-guardar">Guardar</button>
+            <button type="button" onclick="window.location.href='gestionarSeguimiento.html'" class="btn-cancelar">
+                Cancelar
+            </button>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="js/anadirSeguimiento.js"></script>
+    </body>
+</html>

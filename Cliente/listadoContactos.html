@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de contactos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Botones que redirigen a un lado o a otro pagina transitoria -->
+<body>
+    <div class="header">
+        <h1>Gestión de Contactos</h1>
+        <div class="user-info">
+            <span id="user"></span>
+            <button id="logoutButton">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <button onclick="window.location.href='tutor.html'" class="btn-volver">Volver</button>
+
+    <div class="container">
+
+        <div id="contactosContainer" class="contactos-container">
+            
+        </div>
+    </div>
+
+    <script type="module" src="js/listadoContactos.js"></script>
+</body>
+</html> 
